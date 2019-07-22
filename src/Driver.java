@@ -17,7 +17,7 @@ public class Driver extends ReusableMethods{
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException {
 		
 		ReusableMethods re = new ReusableMethods();	
-		String data = "C:\\myProject\\eclipse-workspace\\SalesForce\\SFDC_Testing_Excel_Data\\SFDCData.xls";
+		String data = "C:\\myProject\\GIT\\SFDC_Testing_Excel_Data\\SFDCData.xls";
 		String[][] recdata = ReusableMethods.readXlData(data , "Sheet1");		
 		for(int i = 1; i <recdata.length; i++) {
 			resultflag = 0;
@@ -49,7 +49,7 @@ public class Driver extends ReusableMethods{
 	}
 	
 	public static void writeXlData(int i,String result,String color) throws IOException{
-		File file=new File("C:\\myProject\\eclipse-workspace\\SalesForce\\SFDC_Testing_Excel_Data\\SFDCData.xls");
+		File file=new File("C:\\myProject\\GIT\\SFDC_Testing_Excel_Data\\SFDCData.xls");
 		FileInputStream fs=new FileInputStream(file);
 		HSSFWorkbook wb=new HSSFWorkbook(fs);
 		HSSFSheet sheet=wb.getSheet("Sheet1");
